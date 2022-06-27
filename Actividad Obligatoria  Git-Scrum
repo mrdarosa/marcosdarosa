@@ -1,0 +1,55 @@
+Código HTML:
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unidad 3-js- Comision 22003</title>
+
+  <style type="text/css">
+  .centrar {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  </style>
+
+  </head>
+  <body text-align= "left">  
+   
+      <h1>Ingreso al sistema</h1>
+     
+          <form id="miFormulario" action="" method="get" onsubmit="return valida(this)">
+          <div class="centrar">
+              <p><b> Usuario: <input type="email" id="usuario" placeholder="usu@rio"/> <br></p>
+              <p><b> Clave: <input type="password" id="clave" placeholder=" clave "/> <br></p>
+              <label><input type="submit" value="Ingresar" /><b></label>
+             </div>
+          </form>
+         
+     <script src="C:\Users\HP\Desktop\html curso\material\Javascript\U3\Actividad Obligatoria\script.js"> </script>
+  </body>
+</html>
+
+
+Código JS:
+
+
+function valida(f) {
+    var ok = true;
+    var msg = "Debes escribir contenido en los campos:\n";
+   
+    if(f.elements[0].value == "")   {
+      msg += "* usuario\n";
+      ok = false;  }
+    if(f.elements["clave"].value == "")   {
+      msg += "* clave\n";
+      ok = false;   }
+   
+    if(ok == false)
+      alert(msg);
+    return ok;
+  }
